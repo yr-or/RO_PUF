@@ -2,12 +2,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-file1 = r"C:\Users\Rory\Documents\HDL\RO_PUF\iladata4.csv"
-file2 = r"C:\Users\Rory\Documents\HDL\RO_PUF\iladata_feedbackRO.csv"
-file3 = r"C:\Users\Rory\Documents\HDL\RO_PUF\iladata_lfsr.csv"
-file4 = r"C:\Users\Rory\Documents\HDL\RO_PUF\iladata_RO4_PUF.csv"
+linux_path = "/user/masters/KilbyR/Project/RO_PUF_Linux/Outputs/"
+win_path = "C:\\Users\\Rory\\Documents\\HDL\\RO_PUF\\Outputs\\"
 
-df = pd.read_csv(file4, skiprows=1)
+file1 = "iladata4.csv"
+file2 = "iladata_feedbackRO.csv"
+file3 = "iladata_lfsr.csv"
+file4 = "iladata_RO4_puf.csv"
+
+file = linux_path + file4
+
+df = pd.read_csv(file, skiprows=1)
 
 df.info()
 
